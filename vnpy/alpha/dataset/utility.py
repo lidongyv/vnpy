@@ -142,6 +142,28 @@ def calculate_by_expression(df: pl.DataFrame, expression: str) -> pl.DataFrame:
         sign, pow1, pow2,
         quesval, quesval2
     )
+    # Import AlphaGPT operators (from AlphaGPT project)
+    from .alphagpt_ops import (             # noqa
+        gpt_gate,
+        gpt_jump,
+        gpt_decay,
+        gpt_max_n,
+        gpt_liquidity_health,
+        gpt_buy_sell_imbalance,
+        gpt_fomo_acceleration,
+        gpt_pump_deviation,
+        gpt_volatility_clustering,
+        gpt_momentum_reversal,
+        gpt_relative_strength,
+        gpt_robust_norm,
+        gpt_cs_robust_norm,
+        gpt_log_return,
+        gpt_vol_shock,
+        gpt_trend,
+        gpt_high_low_range,
+        gpt_close_position,
+        gpt_volume_trend
+    )
 
     # Extract feature objects to local space
     d: dict = locals()
